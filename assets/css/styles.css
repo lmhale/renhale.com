@@ -1,0 +1,155 @@
+/* Global styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, serif;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  background-color: #f8f4e7; /* solarized warm yellow */
+  color: #073642; /* solarized dark blue-gray */
+  line-height: 1.8;
+  margin: 0;
+  padding: 2rem 1rem;
+}
+
+/* Content width container */
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  font-family: Georgia, serif;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Navigation */
+.nav-container {
+  margin-bottom: 2rem;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  font-weight: 500;
+  flex-wrap: wrap;
+}
+
+.top-nav a {
+  color: #586e75;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.top-nav a:hover {
+  border-bottom-color: #01918c;
+}
+
+/* Links */
+a {
+  color: #586e75;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+a:hover {
+  border-bottom-color: #01918c;
+}
+
+/* Profile section */
+.profile-box {
+  background: #f8f4e7;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 0; /* inner padding handled by .section-inner */
+}
+
+.profile-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.profile-pic-left {
+  width: clamp(80px, 15vw, 100px);
+  height: clamp(80px, 15vw, 100px);
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  flex-shrink: 0;
+}
+
+.profile-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Projects */
+.projects h2 {
+  margin-bottom: 1rem;
+}
+
+.project-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 1rem;
+}
+
+.project-card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #f8f4e7;
+  transition: background 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+}
+
+.project-card:hover {
+  background: #f9f9f9;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  font-size: 1.8rem;
+  color: #586e75;
+  transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: #01918c;
+}
