@@ -1,100 +1,59 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ren Hale</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <!-- Navigation -->
-    <div class="nav-container section-inner">
-      <nav class="top-nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#connect">Connect</a>
-      </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ren Hale — Indie Web Developer</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/rss-feed.js" defer></script>
+  <link rel="alternate" type="application/rss+xml" title="Ren Hale RSS Feed" href="feed.xml">
+  <link rel="webmention" href="https://webmention.io/your-domain.com/webmention">
+  <link rel="pingback" href="https://webmention.io/your-domain.com/xmlrpc">
+  <meta name="description" content="Personal website of Ren Hale, indie web developer and digital craftsman">
+  <meta name="author" content="Ren Hale">
+</head>
+<body>
+  <header>
+    <div class="site-branding">
+      <!-- <a href="/" class="site-title">Ren Hale</a> -->
     </div>
+    <nav class="nav-container">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="articles/">Articles</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="connect.html">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Profile Section -->
-    <section class="profile-box" id="about">
-      <div class="section-inner profile-inner">
-        <img
-          src="assets/profile-pic.JPG"
-          alt="Ren Hale headshot"
-          class="profile-pic-left"
-        />
-        <div class="profile-text">
-          <h1>Ren Hale</h1>
-          <p>
-            I'm a software engineer focused on civic tech and community tools. I
-            received my Bachelor's in Political Science from Columbia
-            University.
-          </p>
-        </div>
+  <main>
+    <article class="h-entry">
+      <h1 class="p-name">Welcome to My Space</h1>
+      
+      <div class="e-content">
+        <p>Hello! I'm Ren, and this is my little corner of the indie web. Here you'll find my thoughts on web development, digital craftsmanship, and the beauty of building things that matter.</p>
+        
+        <p>This site follows the principles of the <a href="https://indieweb.org/">indie web movement</a> — it's my own domain, my own content, and my own voice. No algorithms, no tracking, just honest thoughts and genuine connections.</p>
+        
+        <p>Feel free to explore, and don't hesitate to <a href="connect.html">reach out</a> if you'd like to connect!</p>
       </div>
-    </section>
+    </article>
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-      <div class="section-inner">
-        <h2>Projects</h2>
-        <div class="project-grid">
-          <div class="project-card">
-            <h3>Civic Scraper</h3>
-            <p>
-              Pulls meeting data from municipal websites for better public
-              access.
-            </p>
-            <a href="#">View Project</a>
-          </div>
-          <div class="project-card">
-            <h3>Sample Project</h3>
-            <p>A description of the project I worked on.</p>
-            <a href="#">View Project</a>
-          </div>
-          <div class="project-card">
-            <h3>Sample Project</h3>
-            <p>A description of the project I worked on.</p>
-            <a href="#">View Project</a>
-          </div>
-        </div>
+    <section>
+      <h2>Recent Content</h2>
+      <div id="content-feed">
+        <!-- Dynamic content feed will be loaded here -->
+        <p>Loading recent content...</p>
       </div>
+    
     </section>
-
-    <!-- Connect Section -->
-    <section class="content" id="connect">
-      <div class="section-inner">
-        <h2>Connect with me</h2>
-        <div class="social-icons">
-          <a
-            href="https://www.linkedin.com/in/laurenmariehale/"
-            title="LinkedIn"
-            aria-label="LinkedIn"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a
-            href="https://github.com/lmhale"
-            title="GitHub"
-            aria-label="GitHub"
-          >
-            <i class="fab fa-github"></i>
-          </a>
-          <a
-            href="https://substack.com/@ren1474952"
-            title="Substack"
-            aria-label="Substack"
-          >
-            <i class="fas fa-envelope-open-text"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-  </body>
+  </main>
+  
+  <footer>
+    <p>© 2025 Ren Hale • Built with ❤️ and indie web principles</p>
+    <p><a href="https://indieweb.org/">Indie Web</a> • <a href="https://webmention.io/">Webmentions</a> • <a href="https://microformats.org/">Microformats</a></p>
+  </footer>
+</body>
 </html>

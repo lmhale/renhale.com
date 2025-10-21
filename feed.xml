@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ren Hale — Indie Web Developer</title>
+    <description>Personal website of Ren Hale, indie web developer and digital craftsman. Articles, notes, and thoughts on web development, indie web principles, and digital craftsmanship.</description>
+    <link>https://renhale.dev/</link>
+    <language>en-us</language>
+    <managingEditor>hello@renhale.dev (Ren Hale)</managingEditor>
+    <webMaster>hello@renhale.dev (Ren Hale)</webMaster>
+    <lastBuildDate>Tue, 27 Jan 2025 12:00:00 GMT</lastBuildDate>
+    <atom:link href="https://renhale.dev/feed.xml" rel="self" type="application/rss+xml"/>
+    
+    <!-- Articles -->
+    <item>
+      <title>Building My First Indie Web Site</title>
+      <description>After years of building sites for others, I finally decided to create my own space on the indie web. Here's what I learned about microformats, webmentions, and the beauty of owning your own domain.</description>
+      <link>https://renhale.dev/articles/building-indie-web-site.html</link>
+      <guid isPermaLink="true">https://renhale.dev/articles/building-indie-web-site.html</guid>
+      <pubDate>Mon, 27 Jan 2025 12:00:00 GMT</pubDate>
+      <category>Article</category>
+    </item>
+    
+    <item>
+      <title>Creating a Solarized Design System</title>
+      <description>The solarized color palette isn't just for code editors. I've been experimenting with using it for web design, and the results are surprisingly elegant and readable.</description>
+      <link>https://renhale.dev/articles/solarized-design-system.html</link>
+      <guid isPermaLink="true">https://renhale.dev/articles/solarized-design-system.html</guid>
+      <pubDate>Mon, 20 Jan 2025 12:00:00 GMT</pubDate>
+      <category>Article</category>
+    </item>
+    
+    <item>
+      <title>Why Web Standards Still Matter</title>
+      <description>In a world of ever-changing frameworks and tools, web standards provide the foundation for a more accessible, interoperable, and sustainable web.</description>
+      <link>https://renhale.dev/articles/web-standards-matter.html</link>
+      <guid isPermaLink="true">https://renhale.dev/articles/web-standards-matter.html</guid>
+      <pubDate>Wed, 15 Jan 2025 12:00:00 GMT</pubDate>
+      <category>Article</category>
+    </item>
+    
+    <item>
+      <title>The Art of Minimal Web Development</title>
+      <description>Sometimes the best solution is the unknown one. Here's how I approach web development with minimalism in mind, focusing on what truly matters.</description>
+      <link>https://renhale.dev/articles/minimal-web-development.html</link>
+      <guid isPermaLink="true">https://renhale.dev/articles/minimal-web-development.html</guid>
+      <pubDate>Fri, 10 Jan 2025 12:00:00 GMT</pubDate>
+      <category>Article</category>
+    </item>
+    
+    <!-- Notes -->
+    <item>
+      <title>The Beauty of Simple Tools</title>
+      <description>Sometimes the most powerful tools are the simplest ones. A text editor, a terminal, and a browser can build almost anything. The complexity often comes from trying to solve problems that don't exist yet.</description>
+      <link>https://renhale.dev/notes/learning-in-public.html</link>
+      <guid isPermaLink="true">https://renhale.dev/notes/learning-in-public.html</guid>
+      <pubDate>Mon, 27 Jan 2025 10:00:00 GMT</pubDate>
+      <category>Note</category>
+    </item>
+    
+    <item>
+      <title>Indie Web Philosophy</title>
+      <description>The indie web isn't about rejecting modern tools—it's about choosing tools that serve you, not the other way around. Own your data, own your voice, own your space.</description>
+      <link>https://renhale.dev/notes/indie-web-philosophy.html</link>
+      <guid isPermaLink="true">https://renhale.dev/notes/indie-web-philosophy.html</guid>
+      <pubDate>Sat, 25 Jan 2025 10:00:00 GMT</pubDate>
+      <category>Note</category>
+    </item>
+    
+    <item>
+      <title>Learning in Public</title>
+      <description>There's something powerful about documenting your learning process. It helps you understand better, and it might help someone else too. Imperfection is part of the journey.</description>
+      <link>https://renhale.dev/notes/learning-in-public.html</link>
+      <guid isPermaLink="true">https://renhale.dev/notes/learning-in-public.html</guid>
+      <pubDate>Thu, 23 Jan 2025 10:00:00 GMT</pubDate>
+      <category>Note</category>
+    </item>
+    
+    <item>
+      <title>Thoughtful Technology</title>
+      <description>Technology should enhance human connection, not replace it. Every tool we build should make us more human, not less.</description>
+      <link>https://renhale.dev/notes/thoughtful-technology.html</link>
+      <guid isPermaLink="true">https://renhale.dev/notes/thoughtful-technology.html</guid>
+      <pubDate>Wed, 15 Jan 2025 10:00:00 GMT</pubDate>
+      <category>Note</category>
+    </item>
+  </channel>
+</rss>
