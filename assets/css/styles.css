@@ -1,8 +1,9 @@
 /* Solarized Soft Paper Theme - Indie Web Design */
 :root {
   /* Solarized Light Colors */
-  --base01: #586e75;
-  --base00: #657b83;
+  --base01: #573c27;
+  --base00: #4c3a2c;
+  --base: #4c3a2c;
   --base0: #839496;
   --base2: #eee8d5;
   --base3: #fdf6e3;
@@ -13,7 +14,7 @@
   
   /* Typography */
   --font-family: 'EB Garamond', 'Georgia', serif;
-  --font-size-base: 17px;
+  --font-size-base: 18px;
 }
 
 body {
@@ -99,25 +100,21 @@ header {
   display: block;
   transition: all 0.2s ease;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   border-radius: 100px;
   background: transparent;
   border: 1px solid transparent;
 }
 
 .nav-container a:hover {
-  background: var(--orange);
+  background: var(--cyan);
   color: var(--base3);
   text-decoration: none;
   transform: translateY(-1px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.nav-container a:focus {
-  outline: 2px solid var(--cyan);
-  outline-offset: 2px;
-  background: var(--base2);
-}
+
 
 .nav-container a:active {
   transform: translateY(0);
@@ -163,16 +160,17 @@ p {
 
 /* Links */
 a {
-  color: var(--cyan);
+  color: var(--orange);
   text-decoration: none;
   font-weight: 600;
 }
 
 a:hover {
   text-decoration: underline;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 3px;
   text-underline-offset: 2px;
-  text-decoration-color: var(--orange);
+  color: var(--cyan);
+  text-decoration-color: var(--cyan);
 }
 
 /* Lists */
@@ -223,8 +221,15 @@ footer {
 .notes-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 2rem;
-  row-gap: 5rem;
+  column-gap: 1.5rem;
+  row-gap: 3rem;
+}
+
+@media (max-width: 768px) {
+  .notes-grid {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
 }
 
 .note-entry {
@@ -245,9 +250,14 @@ footer {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  font-size: 1.2rem;
-  opacity: 0.6;
+  opacity: 0.9;
   transition: opacity 0.2s ease;
+}
+
+.note-icon img {
+  width: 48px;
+  height: 48px;
+  display: block;
 }
 
 .note-entry:hover .note-icon {
@@ -292,12 +302,17 @@ footer {
   text-decoration: none;
   color: inherit;
   display: block;
+  margin-bottom: 2rem;
 }
 
 .note-card-link:hover .note-entry {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  border-color: var(--cyan);
+
+}
+
+.note-card-link:hover {
+  text-decoration: none;
 }
 
 .note-card-link:hover .note-icon {
@@ -316,14 +331,14 @@ footer {
 }
 
 .note-navigation a {
-  color: var(--cyan);
+  color: var(--orange);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .note-navigation a:hover {
-  color: var(--orange);
+  color: var(--cyan);
   text-decoration: underline;
 }
 
@@ -423,7 +438,8 @@ footer {
 #content-feed {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  column-gap: 2rem;
+  row-gap: 1.25rem;
   margin-bottom: 2rem;
   padding: 2rem;
   border-radius: 12px;
@@ -438,7 +454,8 @@ footer {
 @media (max-width: 768px) {
   #content-feed {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    column-gap: 1rem;
+    row-gap: 1rem;
     padding: 1.5rem;
     max-height: 500px;
   }
@@ -471,35 +488,33 @@ footer {
 }
 
 .feed-item {
-  background: transparent;
+  background: var(--base3);
   padding: 0;
-  border-radius: 0;
-  border: none;
-  margin-bottom: 0;
+  border-radius: 12px;
+  border: 1px solid var(--base2);
+  margin-bottom: 2rem;
   position: relative;
   transition: all 0.3s ease;
-  box-shadow: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
 .feed-item:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .feed-item-header {
   margin-bottom: 0;
   display: block;
-
   padding: 1.5rem;
-
+  border-bottom: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.2);
+  transition: border-bottom-color 0.2s ease;
 }
 
-.feed-item:hover .feed-item-header {
-  border-bottom-color: var(--cyan);
-}
 
 .feed-item-type {
   display: none;
@@ -525,7 +540,7 @@ footer {
 }
 
 .feed-item-meta h3 a:hover {
-  color: var(--orange);
+  color: var(--cyan);
 }
 
 .feed-item-meta time {
@@ -542,6 +557,7 @@ footer {
   margin-left: 0;
   padding: 1.5rem;
   flex: 1;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .feed-item .e-content p {
@@ -559,7 +575,7 @@ footer {
 }
 
 .feed-item .e-content a {
-  color: var(--cyan);
+  color: var(--orange);
   text-decoration: none;
   font-weight: 700;
   text-transform: uppercase;
@@ -568,7 +584,7 @@ footer {
 }
 
 .feed-item .e-content a:hover {
-  color: var(--orange);
+  color: var(--cyan);
   text-decoration: underline;
 }
 
@@ -617,8 +633,8 @@ a:hover .fa-brands {
 }
 
 .connect-item {
-  margin-bottom: 1rem;
-  padding: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
   background: var(--base2);
   border-radius: 8px;
   border-left: 4px solid var(--orange);
@@ -629,8 +645,9 @@ a:hover .fa-brands {
 
 .connect-item:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
   border-left-color: var(--cyan);
+  background: var(--base3);
 }
 
 .connect-item h3 {
@@ -675,7 +692,7 @@ a:hover .fa-brands {
   width: 0;
   height: 0;
   border-left: 15px solid transparent;
-  border-top: 15px solid var(--base3);
+  border-top: 15px solid var(--base2);
   border-radius: 0 8px 0 0;
 }
 
