@@ -158,6 +158,44 @@ p {
   color: var(--base00);
 }
 
+/* About layout: photo + text card */
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 2.5rem;
+  align-items: center;
+  padding: 2rem 2.25rem;
+  margin-top: 0.5rem;
+  border-radius: 18px;
+  background: rgba(238, 232, 213, 0.7); /* var(--base2) with a soft overlay */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Image column */
+.profile-pic {
+  width: 100%;
+          /* keeps it from dominating vertically */
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Text column */
+.about-text {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertically pleasant, not forced top/bottom */
+}
+
+.about-text p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+
+
 /* Links */
 a {
   color: var(--orange);
