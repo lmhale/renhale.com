@@ -1,0 +1,78 @@
+---
+layout: layouts/page
+title: Welcome to My Space
+---
+
+<article class="h-entry">
+ 
+  
+  <div class="e-content">
+    <p></p>
+  </div>
+</article>
+
+<section>
+  <h2>Recent Content</h2>
+  <div id="content-feed">
+    {% for item in collections.allContent %}
+    {% if loop.index <= 4 %}
+    <article class="h-entry feed-item">
+      <div class="feed-item-header">
+        <span class="feed-item-type">{% if item.data.category == 'Article' %}📝{% else %}✏️{% endif %}</span>
+        <div class="feed-item-meta">
+          <h3 class="p-name">
+            <a href="{{ item.url }}">{{ item.data.title }}</a>
+          </h3>
+          <time class="dt-published" datetime="{{ item.date | htmlDateString }}">{{ item.date | readableDate }}</time>
+        </div>
+      </div>
+      <div class="e-content">
+        <p>{{ item.data.description }}</p>
+        {% if item.data.category == 'Article' %}<p><a href="{{ item.url }}">Read more →</a></p>{% endif %}
+      </div>
+    </article>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section id="Connect">
+  <h2>Connect with Me</h2>
+  <p>Here are other ways to connect with me</p>
+  
+  <div class="connect-container">
+    <div class="connect-item">
+      <h3><a href="https://www.linkedin.com/in/laurenmariehale/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></h3>
+      <p class="connect-subtitle">Professional networking and career updates</p>
+    </div>
+    
+    <div class="connect-item">
+      <h3><a href="https://github.com/lmhale"><i class="fa-brands fa-github"></i> GitHub</a></h3>
+      <p class="connect-subtitle">Code repositories and development projects</p>
+    </div>
+    
+    <div class="connect-item">
+      <h3><a href="https://substack.com/@renmhale7">📚 Substack</a></h3>
+      <p class="connect-subtitle">Newsletter and long-form writing</p>
+    </div>
+    
+    <div class="connect-item">
+      <h3><a href="https://medium.com/@renmhale7"><i class="fa-brands fa-medium"></i> Medium</a></h3>
+      <p class="connect-subtitle">Articles and technical writing</p>
+    </div>
+    
+    <div class="connect-item">
+      <h3><a href="https://tulsa-ok.documenters.org/programs/users/ren-hale-11783/profile/#reporting">📋 Tulsa Documenters</a></h3>
+      <p class="connect-subtitle">Local government reporting and community journalism</p>
+    </div>
+  </div>
+</section>
+
+<h2>Indie Web</h2>
+<h3>Webmentions</h3>
+<p>This site supports <a href="https://webmention.io/">webmentions</a>! If you have a site that supports webmentions, you can mention any post on this site and it will appear here (once I set up the webmention endpoint).</p>
+
+<h3>RSS Feed</h3>
+<p>Subscribe to my RSS feed to stay updated with my latest articles and notes:</p>
+<p><a href="/feed.xml">📡 RSS Feed</a> • <a href="/feed.xml" type="application/rss+xml">Subscribe in your reader</a></p>
+

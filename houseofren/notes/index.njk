@@ -1,0 +1,33 @@
+---
+layout: layouts/page
+title: Notes
+description: Notes and thoughts by Ren Hale
+---
+
+<article class="h-entry">
+
+  
+  <div class="e-content">
+    <p>A collection of quick thoughts, ideas, and observations that don't quite warrant a full blog post but are worth capturing.</p>
+    
+    <div class="notes-grid">
+      {% for note in collections.notes %}
+      <a href="{{ note.url }}" class="note-card-link">
+        <article class="h-entry note-entry">
+          <div class="note-icon">
+            <img src="/assets/images/notes-icon.svg" alt="Notes icon">
+          </div>
+          <h3 class="p-name">{{ note.data.title }}</h3>
+          <div class="post-meta">
+            <time class="dt-published" datetime="{{ note.date | htmlDateString }}">{{ note.date | readableDate }}</time>
+          </div>
+          <div class="e-content">
+            <p>{{ note.data.description }}</p>
+          </div>
+        </article>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</article>
+

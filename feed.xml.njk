@@ -1,0 +1,36 @@
+---
+layout: null
+permalink: feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>{{ site.title | xml }}</title>
+    <link>{{ site.url }}</link>
+    <description>{{ site.description | xml }}</description>
+    <language>en-us</language>
+    <managingEditor>{{ site.email }} ({{ site.author }})</managingEditor>
+    <webMaster>{{ site.email }} ({{ site.author }})</webMaster>
+    <lastBuildDate>{% if collections.allContent and collections.allContent.length > 0 and collections.allContent[0].date %}{{ collections.allContent[0].date | dateToRfc822 }}{% else %}{{ "now" | date | dateToRfc822 }}{% endif %}</lastBuildDate>
+    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml"/>
+    <ttl>60</ttl>
+    <generator>Eleventy</generator>
+    
+    {% for item in collections.allContent %}
+    {% if loop.index <= 20 %}
+    <item>
+      <title>{{ item.data.title | xml }}</title>
+      <link>{{ site.url }}{{ item.url | url }}</link>
+      <description>{{ item.data.description | xml }}</description>
+      {% if item.templateContent %}
+      <content:encoded><![CDATA[{{ item.templateContent | htmlToAbsoluteUrls(site.url) }}]]></content:encoded>
+      {% endif %}
+      <pubDate>{{ item.date | dateToRfc822 }}</pubDate>
+      <guid isPermaLink="true">{{ site.url }}{{ item.url | url }}</guid>
+      {% if item.data.category %}<category>{{ item.data.category | xml }}</category>{% endif %}
+    </item>
+    {% endif %}
+    {% endfor %}
+  </channel>
+</rss>
