@@ -46,8 +46,10 @@ module.exports = function(eleventyConfig) {
 
   // Add shortcode for current year
   eleventyConfig.addShortcode("year", () => {
-    return new Date().getFullYear();
-  });
+    year = new Date().getFullYear().toString();
+    return year;
+  })
+
 
   // Collections
   eleventyConfig.addCollection("articles", function(collectionApi) {
