@@ -8,6 +8,7 @@ module.exports = function(eleventyConfig) {
   // Copy static assets
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("CNAME");
+  eleventyConfig.addPassthroughCopy("robots.txt");
 
   // Date formatting filters
   eleventyConfig.addFilter("readableDate", (dateObj) => {
@@ -48,6 +49,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addShortcode("year", () => {
     year = new Date().getFullYear().toString();
     return year;
+  })
+
+  // Add filter for current date (for sitemap)
+  eleventyConfig.addFilter("nowDate", () => {
+    return DateTime.now().toFormat('yyyy-LL-dd');
   })
 
 
