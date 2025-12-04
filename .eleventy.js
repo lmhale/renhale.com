@@ -80,7 +80,6 @@ module.exports = function(eleventyConfig) {
   
   // Ignore old HTML files (we're using Markdown/Nunjucks now)
   eleventyConfig.ignores.add("index.html");
-  eleventyConfig.ignores.add("about.html");
   eleventyConfig.ignores.add("houseofren/**/*.html");
 
   return {
@@ -90,7 +89,7 @@ module.exports = function(eleventyConfig) {
       includes: "_includes",
       data: "_data"
     },
-    templateFormats: ["md", "njk"],
+    templateFormats: ["md", "njk", "html"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
