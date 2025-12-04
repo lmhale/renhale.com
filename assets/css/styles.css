@@ -181,20 +181,25 @@ p {
 
 /* Image column */
 .profile-pic {
-  width: 100%;
-  max-width: 350px;
+  width: 350px;
   height: 350px;
+  display: block;
+  margin: 0 auto;
   object-fit: cover;
+  object-position: center;
+  image-rendering: auto;
+  -ms-interpolation-mode: bicubic;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
 }
 
 @media (max-width: 768px) {
   .profile-pic {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
     margin: 0 auto;
     display: block;
-    height: auto;
-    max-height: 350px;
   }
 }
 
