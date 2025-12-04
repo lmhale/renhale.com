@@ -1,0 +1,21 @@
+---
+layout: layouts/page
+title: Welcome to the House of Ren.
+description: Articles about indie web development, digital craftsmanship, and web standards
+---
+
+<p>This is my blog.</p>
+
+{% for article in collections.articles %}
+<article class="h-entry">
+  <h2 class="p-name"><a href="{{ article.url }}">{{ article.data.title }}</a></h2>
+  <div class="post-meta">
+    <time class="dt-published" datetime="{{ article.date | htmlDateString }}">{{ article.date | readableDate }}</time>
+  </div>
+  <div class="e-content">
+    <p>{{ article.data.description }}</p>
+    <p><a href="{{ article.url }}">Read more →</a></p>
+  </div>
+</article>
+{% endfor %}
+
